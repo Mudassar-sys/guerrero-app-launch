@@ -101,7 +101,7 @@ h1,h2,h3,h4,.brand{font-family:'Sora','Inter',sans-serif}
 .chip i{font-style:normal}
 
 /* section heads */
-section{position:relative;z-index:1;padding:74px 0}
+section{position:relative;z-index:1;padding:74px 0;scroll-margin-top:78px}
 .sec-head{text-align:center;margin-bottom:44px}
 .sec-head .tag{
   display:inline-block;color:var(--yellow);font-weight:700;font-size:12.5px;letter-spacing:2.2px;
@@ -271,6 +271,23 @@ section{position:relative;z-index:1;padding:74px 0}
 .tog::after{content:'';position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:.25s;box-shadow:0 1px 4px rgba(0,0,0,.25)}
 .tog.on{background:var(--green)}
 .tog.on::after{left:21px}
+
+/* small phone safety */
+@media(max-width:430px){
+  .wrap{padding:0 14px}
+  .phone{
+    width:calc(100vw - 40px);max-width:340px;height:648px;border-radius:36px;
+    box-shadow:0 18px 44px rgba(0,0,0,.55),0 0 0 6px #0d1425,0 0 0 7px #1d2b47;
+  }
+  .hero{padding:56px 0 24px}
+  section{padding:56px 0}
+  .note-card{padding:28px 22px}
+  .keep-band{flex-direction:column;align-items:flex-start;gap:10px;padding:20px}
+  .avail-band{padding:20px}
+  .int-card,.exp-card{padding:22px}
+  .mile{grid-template-columns:48px 1fr}
+  .mile .mbody{padding:0 0 26px 14px}
+}
 
 /* progress steps in phone */
 .psteps{display:flex;gap:5px;margin:2px 0 12px}
